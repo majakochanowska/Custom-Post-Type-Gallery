@@ -1,4 +1,5 @@
 # WordPress Custom Post Type Gallery
-NOT FINISHED YET
 
-Gallery page in Twenty Twenty Child Theme
+Gallery page in Twenty Twenty Child Theme with simple lightbox effect.
+
+Needs improvement on mobile. 
