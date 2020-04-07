@@ -1,6 +1,6 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
-function my_theme_enqueue_styles() {
+add_action( 'wp_enqueue_scripts', 'twentytwentychild_enqueue_styles' );
+function twentytwentychild_enqueue_styles() {
  
     $parent_style = 'parent-style'; 
  
@@ -12,7 +12,7 @@ function my_theme_enqueue_styles() {
     );
 }
 
-function create_posttype() {
+function twentytwentychild_create_posttype() {
     register_post_type( 'Galeria',
     array(
       'labels' => array(
@@ -28,6 +28,14 @@ function create_posttype() {
      )
     );
     }
-    add_action( 'init', 'create_posttype' );
+add_action( 'init', 'twentytwentychild_create_posttype' );
+
+add_image_size( 'custom-gallery-size', 9999, 600, false );
+
+function twentytwentychild_enqueue_scripts() {
+    wp_enqueue_script( 'jQuery', get_stylesheet_directory_uri() . '/js/jquery-3.4.1.min.js', array(), '3.4.1', false );
+    wp_enqueue_script( 'Lightbox', get_stylesheet_directory_uri() . '/js/lightbox.js' );
+}
+add_action( 'wp_enqueue_scripts', 'twentytwentychild_enqueue_scripts' );
 
     

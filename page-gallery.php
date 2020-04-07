@@ -20,10 +20,21 @@
 <?php query_posts(array(
    'post_type' => 'galeria'
 )); ?>
+
+<div class="custom-gallery-content">
+
+<div id="lightbox">
+	<img src="" id="light-img">
+</div>
 <?php
     while (have_posts()) : the_post(); ?>
-<?php the_post_thumbnail(); ?>
+
+    <div class="custom-gallery-item">
+        <?php the_post_thumbnail( 'custom-gallery-size', array( 'class' => 'custom-image')); ?>
+    </div>
 <?php endwhile; ?>
+
+</div><!-- .gallery-content -->
 
 </main><!-- #site-content -->
 
