@@ -34,7 +34,7 @@
     </div>
 <?php endwhile; ?>
 
-</div><!-- .gallery-content -->
+</div><!-- .custom-gallery-content -->
 
 </main><!-- #site-content -->
 

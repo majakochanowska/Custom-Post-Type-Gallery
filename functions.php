@@ -38,4 +38,8 @@ function twentytwentychild_enqueue_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'twentytwentychild_enqueue_scripts' );
 
-    
+function twentytwentychild_add_fonts() {
+    wp_enqueue_style( 'googlefonts', 'https://fonts.googleapis.com/css2?family=Alegreya+SC&display=swap' );
+    wp_enqueue_style( 'onlinewebfonts', 'https://db.onlinewebfonts.com/c/1a045963159927274c92b0444fb83c17?family=Avenir' );
+} 
+add_action( 'wp_enqueue_scripts', 'twentytwentychild_add_fonts' );
