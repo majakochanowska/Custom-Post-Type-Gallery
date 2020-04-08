@@ -43,3 +43,16 @@ function twentytwentychild_add_fonts() {
     wp_enqueue_style( 'onlinewebfonts', 'https://db.onlinewebfonts.com/c/1a045963159927274c92b0444fb83c17?family=Avenir' );
 } 
 add_action( 'wp_enqueue_scripts', 'twentytwentychild_add_fonts' );
+
+function twentytwentychild_widgets_init() {
+    register_sidebar( array(
+        'name'          => __( 'Widget za treścią strony', 'twentytwentychild' ),
+        'id'            => 'after-content',
+        'description'   => __( 'Widget wyświetlany na stronie Galeria za zdjęciami.', 'twentytwentychild' ),
+        'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
+    ) );
+}
+add_action( 'widgets_init', 'twentytwentychild_widgets_init' );

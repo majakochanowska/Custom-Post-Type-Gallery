@@ -36,6 +36,12 @@
 
 </div><!-- .custom-gallery-content -->
 
+<?php if ( is_active_sidebar( 'after-content' ) ) : ?>
+	<div class="footer-logo">
+		<?php dynamic_sidebar( 'after-content' ); ?>
+	</div>
+<?php endif; ?>
+
 </main><!-- #site-content -->
 
 <?php get_footer(); ?>
